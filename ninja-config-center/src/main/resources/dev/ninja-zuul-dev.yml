@@ -1,0 +1,21 @@
+server:
+  port: 9702
+
+spring:
+  application:
+    name: ninja-zuul
+
+eureka:
+  instance:
+    prefer-ip-address: false
+
+zuul:
+  sensitive-headers: Cookie,Set-Cookie
+
+swagger:
+  enable: true
+  describe: 用户服务
+  title: ${spring.application.name}
+  author-name: 布本智能
+  author-url: https://www.baidu.com/
+  author-email: liuji@botbrain.cn

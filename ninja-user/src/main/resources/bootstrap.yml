@@ -1,0 +1,28 @@
+server:
+  port: 9801
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9701/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: ninja-user
+  cloud:
+    config:
+      profile: dev
+      name: ${spring.application.name},monitor
+      discovery:
+        enabled: true
+        service-id: ninja-config-center
+  redis:
+    host: 10.10.23.161
+    port: 6379
+    password: Ers23lP_qw#23FR
+    database: 7
+
+swagger:
+  enable: true

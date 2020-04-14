@@ -1,0 +1,39 @@
+server:
+  port: 9703
+
+spring:
+  profiles:
+    active: native
+  application:
+    name: ninja-config-center
+  cloud:
+    config:
+      name: ${spring.application.name}
+      server:
+        bootstrap: true
+        native:
+          search-locations: classpath:/dev,classpath:/test,classpath:/prod
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9701/eureka/
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+devtools:
+  livereload:
+    enabled: true
+    port: 45729
+  restart:
+    enabled: true
+

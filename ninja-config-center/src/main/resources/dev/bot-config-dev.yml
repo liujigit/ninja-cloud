@@ -1,0 +1,13 @@
+jdbc:
+  driver: org.postgresql.Driver
+  url: jdbc:postgresql://10.10.23.161:5432/botbrain_fish?useUnicode=true&characterEncoding=UTF-8
+  username: firedata
+  password: fdQnv8Q9WbXjqr4z
+  continue-on-error: true
+swagger:
+  enable: true
+  describe: 配置服务
+  title: ${spring.application.name}
+  author-name: 布本智能
+  author-url: https://www.baidu.com/
+  author-email: liuji@botbrain.cn

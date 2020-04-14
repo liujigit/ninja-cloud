@@ -1,0 +1,20 @@
+server:
+  port: 9704
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9701/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: ninja-monitor
+  cloud:
+    config:
+      profile: dev
+      name: ${spring.application.name}
+      discovery:
+        enabled: true
+        service-id: ninja-config-center
